@@ -1,0 +1,462 @@
+.dashboard-container{
+    width:100vw;
+    height: auto;
+    /* border: 1px solid black; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    gap:10px;
+    box-sizing: border-box;
+}
+
+.dashboard-maindiv1{
+    width: 30vw;
+    height: 54vh;
+    /* border: 1px solid blue; */
+    display: flex;
+    /* background-color: antiquewhite; */
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    margin-top: 37px;
+    border-radius: 10px;
+    background-image:url("https://images.pexels.com/photos/604684/pexels-photo-604684.jpeg?auto=compress&cs=tinysrgb&w=600") ;
+}
+.dashboard-maindiv2{
+    width: 75vw;
+    height: auto;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 2rem; */
+    /* border: 1px solid green; */
+}
+.input-grid-one{
+
+    width: 340px;
+    height: 595px;
+    border: 1px solid black;
+    /* background-color: aqua; */
+    overflow-y: scroll;
+    overflow: hidden;
+    margin-top: 36px;
+    border-radius: 10px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+}
+/* {.... spacial dragggable css///////////////////////////////////////////////////} */
+
+
+[data-rbd-droppable-context-id="0"] {
+    overflow-anchor: none;
+    /* border: 1px solid red; */
+    margin: 0px !important;
+    width: 90% !important;
+}
+
+[data-rbd-drag-handle-context-id="0"] {
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    touch-action: manipulation;
+    width: 100% !important;
+}
+.input-grid-one-h{
+    font-size: large;
+    font-family: sans-serif;
+    background-color: #090979;
+    color: white;
+    padding: 4px 0px 4px 0px;
+}
+.input-grid-two-h{
+    font-size: large;
+    font-family: sans-serif;
+    background-color: #090979;
+    color: white;
+    padding: 4px 0px 4px 0px;
+}
+.input-grid-three-h{
+    font-size: large;
+    font-family: sans-serif;
+    background-color: #090979;
+    color: white;
+    padding: 4px 0px 4px 0px;
+}
+
+/* } */
+.input-grid-two{
+
+    border: 1px solid black;
+    /* background-color: orange; */
+    overflow: hidden;
+    margin-top: 36px;
+    border-radius: 10px;
+    width: 340px;
+    height: 595px;
+}
+.input-grid-three{
+
+    border: 1px solid black;
+    /* background-color: orange; */
+    overflow: hidden;
+    margin-top: 36px;
+    border-radius: 10px;
+    width: 340px;
+    height: 595px;
+}
+/* { scroll one...............................................} */
+.input-scroll{
+    width: 99%;
+    height: 100%;
+    overflow-y: scroll;
+    /* overflow: hidden; */
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+}
+.input-scroll::-webkit-scrollbar{
+    width: 10px;
+}
+.input-scroll::-webkit-scrollbar-track{
+    background-color: grey;
+}
+.input-scroll::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-image:linear-gradient(60deg,black,black) ;
+}
+.input-scroll::-webkit-scrollbar-thumb:hover{
+    background-color: black;
+}
+
+/* { two.................................................................} */
+
+.input-scroll-two{
+    width: 99%;
+    height: 100%;
+    overflow-y: scroll;
+    /* overflow: hidden; */
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+}
+.input-scroll-two::-webkit-scrollbar{
+    width: 10px;
+}
+.input-scroll-two::-webkit-scrollbar-track{
+    background-color: grey;
+}
+.input-scroll-two::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-image:linear-gradient(60deg,blue,white) ;
+}
+.input-scroll-two::-webkit-scrollbar-thumb:hover{
+    background-color: black;
+}
+
+/* {,................three..//////////////////////////////////////..} */
+
+.input-scroll-three{
+    width: 99%;
+    height: 100%;
+    overflow-y: scroll;
+    /* overflow: hidden; */
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+}
+.input-scroll-three::-webkit-scrollbar{
+    width: 10px;
+}
+.input-scroll-three::-webkit-scrollbar-track{
+    background-color: black;
+}
+.input-scroll-three::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-image:linear-gradient(60deg,blue,white) ;
+}
+.input-scroll-three::-webkit-scrollbar-thumb:hover{
+    background-color: black;
+}
+
+
+
+
+/* {............card todo list section.......................................} */
+
+.input-todo-list-container{
+    /* width: 100%; */
+    /* height: auto; */
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 10px;
+    margin-top: 10px;
+    /* background-color: bisque; */
+    box-sizing: border-box;
+    padding: 0px 0px 10px 0px;
+
+    /* width: 100%;
+    height: 100%;
+    border:1px solid black;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap:10px;
+background-color: bisque;
+box-sizing: border-box; */
+
+}
+.input-todo-list-container-div{
+    width: 90%;
+    height: auto;
+    border:1px solid gold;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 4px 4px 4px 4px;
+    background-color:#090979 ;
+}
+/* {
+
+mediumspringgreen;
+yellowish :#ffc107
+cornflowerblue
+    background: #121A3E blue
+#020024, black
+#090979,blue
+ #00d4ff cyan
+rgba(60, 177, 245, 0.614); skyblue with cyan
+
+} */
+
+.input-todo-list-head{
+
+    margin: 0px;
+    /* border: 1px solid red; */
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:aliceblue;
+
+}
+
+.input-todo-list-text{
+    margin: 0px;
+    /* border: 1px solid red; */
+    padding: 2px 0px 3px 0px;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-start;
+    text-align: justify;
+    height: 50px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    color:aliceblue;
+}
+.input-todo-list-statusdiv{
+
+    /* border: 1px solid red; */
+    margin: 0px;
+    /* background-color: bisque; */
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px
+}
+
+.input-todo-list-status{
+    
+    /* border: 1px solid red; */
+    margin: 0px;
+    display: inline-block;
+    font-size: 14px;
+    font-family: sans-serif;
+    color: darkseagreen;
+}
+.input-todo-list-status-btn{
+
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    background-color:crimson ;
+    border-radius: 4px;
+    border: solid yellow;
+    /* padding: 0px 14px 0px 6px; */
+    height: 22px;
+}
+
+.input-todo-list-buttondiv{
+    
+    /* border: 1px solid green; */
+    /* background-color: crimson; */
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 10px;
+    padding: 0px 4px 0px;
+
+}
+.input-todo-list-btn1{
+
+    color: #090979;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    /* padding: 0px 14px 0px 6px; */
+    height: 22px;
+}
+.input-todo-list-btn2{
+    
+    color: aqua;
+}
+
+/* { ......................................................} */
+
+
+
+
+
+@media (max-width: 1440px) {
+    .dashboard-maindiv2 {
+      flex-wrap: wrap;
+    }
+  
+    /* .input-grid-one,
+    .input-grid-two,
+    .input-grid-three {
+      width: calc(50% - 10px); 
+      height: auto;
+      margin-bottom: 10px; 
+    } */
+  }
+
+
+  @media screen and (max-width: 1024px){
+
+    .dashboard-maindiv1 {
+        width: 30vw;
+        height: 54vh;
+        /* border: 1px solid blue; */
+        /* display: flex;
+        flex-direction: column;
+        align-items: center; */
+        /* justify-content: center; */
+    }
+
+    .dashboard-maindiv2 {
+        flex-wrap: wrap;
+        width: 67vw;
+      }
+    
+      .input-grid-one,
+      .input-grid-two,
+      .input-grid-three {
+        width: calc(50% - 10px); /* Adjust as needed for spacing */
+        height: 400px;
+        margin-bottom: 10px; /* Add margin between divs */
+      }
+
+      /* .dashboard-maindiv1{
+        width: 27vw;
+        height: 90vh;
+        border: 1px solid blue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+    } */
+    /* .dashboard-maindiv2{
+        width: 70vw;
+        height: auto;
+        border: 1px solid red;
+        display: flex;
+        justify-content: space-between;
+        
+       
+    } */
+
+  }
+
+
+  
+  @media (max-width: 768px) {
+
+    .dashboard-container {
+    
+        flex-direction: column;
+      
+    }
+
+    .dashboard-maindiv1 {
+        width: 100vw;
+        height: 90vh;
+        /* border: 1px solid blue; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* background-color: cornflowerblue; */
+        margin: auto;
+    }
+ 
+    .dashboard-maindiv2 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100vw;
+      }
+    
+
+    .input-grid-one,
+    .input-grid-two,
+    .input-grid-three {
+      width: 100%; /* Full width on smaller screens */
+      height: 400px;
+    }
+
+    .input-div {
+        width: 80%;
+    }
+    .input-textarea {
+        width: 80%;
+    }
+
+  }
+
+  @media screen and (max-width: 320px){
+
+  }
+ 
+
+
+/* @media screen and (max-width: 1024px){
+
+    .dashboard-maindiv2{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  
+    place-items: center;
+    }
+} */
+
+/* @media screen and (max-width: 768px){
+
+    .dashboard-maindiv2{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+     
+        place-items: center;
+        }
+
+} */

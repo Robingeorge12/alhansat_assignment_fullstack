@@ -1,3 +1,33 @@
 .a{
     color:red;
 }
+
+/* // Define an array to hold refs for each card
+const cardRefs = todoData?.map(() => React.createRef());
+
+// ...
+
+{
+  todoData?.map((el, i) => {
+    return (
+      <div key={i} className="input-todo-list-container-div" ref={cardRefs[i]}>
+        <p className="input-todo-list-head">{el.task}</p>
+        <p className="input-todo-list-text">{el.desc}</p>
+        <div className="input-todo-list-statusdiv">
+          <p className="input-todo-list-status">Status:</p>{" "}
+          <button onClick={() => handleSwipe(el._id)} className="input-todo-list-status-btn">
+            {el.current_status}
+          </button>
+        </div>
+        <div className="input-todo-list-buttondiv">
+          <button onClick={() => handleEdit(el._id, el.task, el.desc)} className="input-todo-list-btn1">
+            Edit
+          </button>
+          <button onClick={() => handleDelete(el._id)} className="input-todo-list-btn2">
+            Delete
+          </button>
+        </div>
+      </div>
+    );
+  }); */
+/* } */
