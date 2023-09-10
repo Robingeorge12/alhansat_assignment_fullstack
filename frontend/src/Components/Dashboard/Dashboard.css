@@ -1,5 +1,5 @@
 .dashboard-container{
-    width:100vw;
+    width:99vw;
     height: auto;
     /* border: 1px solid black; */
     display: flex;
@@ -7,6 +7,7 @@
     justify-content: center;
     gap:10px;
     box-sizing: border-box;
+    margin: auto;
 }
 
 .dashboard-maindiv1{
@@ -28,6 +29,7 @@
     /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
+    /* background-image: url("https://images.pexels.com/photos/1590511/pexels-photo-1590511.jpeg?auto=compress&cs=tinysrgb&w=600"); */
     /* display: grid;
     grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     grid-template-rows: auto;
@@ -44,6 +46,7 @@
     overflow: hidden;
     margin-top: 36px;
     border-radius: 10px;
+    background-image: url("https://images.pexels.com/photos/459277/pexels-photo-459277.jpeg?auto=compress&cs=tinysrgb&w=600");
     /* display: flex;
     align-items: center;
     justify-content: center; */
@@ -97,10 +100,12 @@
     border-radius: 10px;
     width: 340px;
     height: 595px;
+    background-image: url("https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&w=600");
 }
-.input-grid-three{
 
-    border: 1px solid black;
+.input-grid-three{
+    background-image: url("https://media.istockphoto.com/id/1214299993/photo/3d-rendering-of-an-abstract-network-plexus-background-for-scientific-and-business-technologies.jpg?s=612x612&w=0&k=20&c=k3HxdIp7fQDSSAjrSPmHzYBN2TDYolmNBWZL7_Igv7Q=");
+    border: 1px solid rgb(54, 50, 50);
     /* background-color: orange; */
     overflow: hidden;
     margin-top: 36px;
@@ -332,13 +337,13 @@ rgba(60, 177, 245, 0.614); skyblue with cyan
       flex-wrap: wrap;
     }
   
-    /* .input-grid-one,
+    .input-grid-one,
     .input-grid-two,
     .input-grid-three {
       width: calc(50% - 10px); 
       height: auto;
       margin-bottom: 10px; 
-    } */
+    }
   }
 
 
