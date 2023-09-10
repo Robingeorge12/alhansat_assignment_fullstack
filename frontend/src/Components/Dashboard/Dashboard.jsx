@@ -25,8 +25,8 @@ function Dashboard() {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const [completed,setCompleted] = useState([])
-  const [incomplete,setIncomplete] = useState([])
+  const [completed, setCompleted] = useState([]);
+  const [incomplete, setIncomplete] = useState([]);
 
   const { todoData } = useSelector((state) => {
     return {
@@ -42,8 +42,8 @@ function Dashboard() {
     dispatch(getData())
       .then((res) => {
         // console.log(res.payload);
-        setCompleted(res.payload.filter((t)=>t.completed))
-        setCompleted(res.payload.filter((t)=>!t.completed))
+        setCompleted(res.payload.filter((t) => t.completed));
+        setCompleted(res.payload.filter((t) => !t.completed));
       })
       .catch((er) => {
         console.log(er);
@@ -72,20 +72,19 @@ function Dashboard() {
   };
   const handleSwipe = (swipe_val) => {};
 
-
-  const handleDragFun = (result)=>{
-
-    const {destination,source,draggableId} = result
-    console.log(destination)
-    console.log(source)
-    console.log(draggableId)
+  const handleDragFun = (result) => {
+    console.log(result);
+    const { destination, source, draggableId } = result;
+    // console.log(destination)
+    // console.log(source)
+    // console.log(draggableId)
 
     // if(source.droppableId==destination.droppableId) {
     //   return ;
     // }
 
     // if(source.droppableId==2) {
-      
+
     //   setCompleted(removeItemById(draggableId,completed))
     // }else{
     //   setIncomplete(removeItemById(draggableId,incomplete))
@@ -94,141 +93,156 @@ function Dashboard() {
     // const task = findItemById(draggableId,[...incomplete,...completed])
 
     // if(source.droppableId==2) {
-      
+
     //   setCompleted([{...task,completed:!task.completed},...completed])
     // }else{
     //   setIncomplete([{...task,completed:!task.completed},...incomplete])
     // }
 
     // console.log("todoData")
+  };
+
+  function findItemById(id, array) {
+    return array.find((el) => el.id == id);
   }
 
-function findItemById(id,array){
-  return array.find((el)=>el.id==id)
-}
-
-const removeItemById = (id,array)=>{
-  return array.filter((el)=>el.id!=id)
-}
+  const removeItemById = (id, array) => {
+    return array.filter((el) => el.id != id);
+  };
 
   // console.log(todoData);
   return (
     <DragDropContext onDragEnd={handleDragFun}>
-      <div className="dashboard-container">
-        <div className="dashboard-maindiv1">
-          <TodoInput setHead={setHead} setContent={setContent} />
-        </div>
-        <div className="dashboard-maindiv2">
-          <div className="input-grid-one">
-            <p className="input-grid-one-h">To Do</p>
-            <div className="input-scroll">
-              <div className="input-todo-list-container">
-                {todoData?.map((el, i) => {
-                  return (
-                    <Droppable key={el._id} droppableId="some_id">
-                    {provided => (
-                      <div ref={provided.innerRef} {...provided.droppableProps}>
-          
-                    <Draggable key={el._id} draggableId={el._id} index={i}>
-                      {(provided,snapshot) => (
-                      <div
-                        ref={provided.innerRef}
-                        {...provided.draggableProps}
-                        {...provided.dragHandleProps}
-                        className="input-todo-list-container-div"
-                      >
-                        <p className="input-todo-list-head">{el.task}</p>
-                        <p className="input-todo-list-text">{el.desc}</p>
-
-                        <div className="input-todo-list-statusdiv">
-                          <p className="input-todo-list-status">Status:</p>{" "}
-                          <button
-                            onClick={() => handleSwipe(el._id)}
-                            className="input-todo-list-status-btn"
-                          >
-                            {el.current_status}
-                          </button>
-                        </div>
-                        <div className="input-todo-list-buttondiv">
-                          <button
-                            onClick={() => handleEdit(el._id, el.task, el.desc)}
-                            className="input-todo-list-btn1"
-                          >
-                            Edit
-                          </button>
-                          <button
-                            onClick={() => handleDelete(el._id)}
-                            className="input-todo-list-btn2"
-                          >
-                            Delete
-                          </button>
-                        </div>
-                      </div>
-                )}
-                    </Draggable>
-                    {provided.placeholder}
-                       </div>
-                       )}
-                     </Droppable>
-                  );
-                })}
+     
+            <div className="dashboard-container">
+              <div className="dashboard-maindiv1">
+                <TodoInput setHead={setHead} setContent={setContent} />
               </div>
-            </div>
-          </div>
+              <div className="dashboard-maindiv2">
+                <div className="input-grid-one">
+                  <p className="input-grid-one-h">To Do</p>
+                  <div className="input-scroll">
+                    <div className="input-todo-list-container">
+                      {todoData?.map((el, i) => {
+                        return (
+                          <Droppable key={el._id} droppableId="some_id">
+                            {(provided) => (
+                              <div
+                                ref={provided.innerRef}
+                                {...provided.droppableProps}
+                              >
+                                <Draggable
+                                  key={el._id}
+                                  draggableId={el._id}
+                                  index={i}
+                                >
+                                  {(provided, snapshot) => (
+                                    <div
+                                      ref={provided.innerRef}
+                                      {...provided.draggableProps}
+                                      {...provided.dragHandleProps}
+                                      className="input-todo-list-container-div"
+                                    >
+                                      <p className="input-todo-list-head">
+                                        {el.task}
+                                      </p>
+                                      <p className="input-todo-list-text">
+                                        {el.desc}
+                                      </p>
 
-          <div className="input-grid-two">
-          <p className="input-grid-one-h">Doing</p>
-            <div className="input-scroll-two">
-              <Droppable droppableId="input-grid-two">
+                                      <div className="input-todo-list-statusdiv">
+                                        <p className="input-todo-list-status">
+                                          Status:
+                                        </p>{" "}
+                                        <button
+                                          onClick={() => handleSwipe(el._id)}
+                                          className="input-todo-list-status-btn"
+                                        >
+                                          {el.current_status}
+                                        </button>
+                                      </div>
+                                      <div className="input-todo-list-buttondiv">
+                                        <button
+                                          onClick={() =>
+                                            handleEdit(el._id, el.task, el.desc)
+                                          }
+                                          className="input-todo-list-btn1"
+                                        >
+                                          Edit
+                                        </button>
+                                        <button
+                                          onClick={() => handleDelete(el._id)}
+                                          className="input-todo-list-btn2"
+                                        >
+                                          Delete
+                                        </button>
+                                      </div>
+                                    </div>
+                                  )}
+                                </Draggable>
+                                {provided.placeholder}
+                              </div>
+                            )}
+                          </Droppable>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="input-grid-two">
+                  <p className="input-grid-one-h">Doing</p>
+                  <div className="input-scroll-two">
+                    <Droppable droppableId="input-grid-two">
                 {(provided, snapshot) => (
                   <div
                     ref={provided.innerRef}
                     {...provided.droppableProps}
-                    // isDraggingOver ={snapshot.isDraggingOver}
-                    // className="input-scroll-two"
+                    
                   >
-                    {/* ... Content for input-grid-two ... */}
+                   
                   </div>
                 )}
               </Droppable>
-            </div>
-          </div>
-          <div className="input-grid-three">
-          <p className="input-grid-one-h">Done</p>
-            <div className="input-scroll-three">
-              <Droppable droppableId="input-grid-three">
+                  </div>
+                </div>
+                <div className="input-grid-three">
+                  <p className="input-grid-one-h">Done</p>
+                  <div className="input-scroll-three">
+                    <Droppable droppableId="input-grid-two">
                 {(provided, snapshot) => (
                   <div
                     ref={provided.innerRef}
                     {...provided.droppableProps}
-                    //  israggingOver ={snapshot.isDraggingOver}
+                 
                   
                   >
-                    {/* ... Content for input-grid-two ... */}
+                 
                   </div>
                 )}
               </Droppable>
-            </div>
-          </div>
-        </div>
+                  </div>
+                </div>
+              </div>
 
-        {edit_id && (
-          <>
-            {" "}
-            <EditModal
-              edit_id={edit_id}
-              setEdit_id={setEdit_id}
-              edit_desc={edit_desc}
-              setEdit_desc={setEdit_desc}
-              edit_task={edit_task}
-              setEdit_task={setEdit_task}
-              handleOpen={() => setOpen(true)}
-              open={open}
-              handleClose={handleClose}
-            />{" "}
-          </>
-        )}
-      </div>
+              {edit_id && (
+                <>
+                  {" "}
+                  <EditModal
+                    edit_id={edit_id}
+                    setEdit_id={setEdit_id}
+                    edit_desc={edit_desc}
+                    setEdit_desc={setEdit_desc}
+                    edit_task={edit_task}
+                    setEdit_task={setEdit_task}
+                    handleOpen={() => setOpen(true)}
+                    open={open}
+                    handleClose={handleClose}
+                  />{" "}
+                </>
+              )}
+            </div>
+       
     </DragDropContext>
   );
 }

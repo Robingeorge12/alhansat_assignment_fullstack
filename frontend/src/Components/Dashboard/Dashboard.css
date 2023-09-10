@@ -66,7 +66,7 @@
     -webkit-touch-callout: none;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     touch-action: manipulation;
-    width: 100% !important;
+    width: 426px !important;
 }
 .input-grid-one-h{
     font-size: large;
@@ -371,6 +371,12 @@ rgba(60, 177, 245, 0.614); skyblue with cyan
         height: 400px;
         margin-bottom: 10px; /* Add margin between divs */
       }
+      [data-rbd-drag-handle-context-id="0"] {
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        touch-action: manipulation;
+        width: 290px !important;
+    }
 
       /* .dashboard-maindiv1{
         width: 27vw;
@@ -422,6 +428,12 @@ rgba(60, 177, 245, 0.614); skyblue with cyan
         width: 100vw;
       }
     
+      [data-rbd-drag-handle-context-id="0"] {
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        touch-action: manipulation;
+        width: 690px !important;
+    }
 
     .input-grid-one,
     .input-grid-two,
@@ -440,6 +452,13 @@ rgba(60, 177, 245, 0.614); skyblue with cyan
   }
 
   @media screen and (max-width: 320px){
+
+    [data-rbd-drag-handle-context-id="0"] {
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        touch-action: manipulation;
+        width: 275px !important;
+    }
 
   }
  
